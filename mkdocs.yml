@@ -1,5 +1,18 @@
+title : mingi's blog
+summary : notes for something.
+site_authors : Mingi Choi
+date : September 14, 2020
+copyright : 2020 Mingi Choi all right reserved.
 site_name: blog
 nav:
     - Home: index.md
+    - sample:
+        - 1: sample1.md
+        - 2: sample2.md
     - About: about.md
 theme: readthedocs
+markdown_extensions:
+    - toc:
+          permalink: "#"
+          baselevel: 2
+          separator: "_"
