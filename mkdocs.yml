@@ -6,11 +6,7 @@ copyright : 2020 Mingi Choi all right reserved.
 site_name: blog
 nav:
     - Home: index.md
-    - build-blog-using-mkdocs.md
-    - coding test:
-        - hackerrank:
-        - a: sample1.md
-        - 2: sample2.md
+    - 1: build-blog-using-mkdocs.md
     - About: about.md
 theme: readthedocs
 markdown_extensions:
