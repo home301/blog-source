@@ -7,6 +7,8 @@ site_name: blog
 nav:
     - Home: index.md
     - 1: build-blog-using-mkdocs.md
+    - 2: data-structure.md
+    - 3: algorithm.md
     - About: about.md
 theme: readthedocs
 markdown_extensions:
