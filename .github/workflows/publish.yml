@@ -25,18 +25,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-       - name: prepare env
-         run:pip install mkdocs
+      - name: prepare env
+        run: pip install mkdocs
        
-       - name: move 
-         run:cd @GITHUB_WORKSPACE
+      - name: move 
+        run: cd @GITHUB_WORKSPACE
          
-       - name: test
-         run: ls
+      - name: test
+        run: ls
 
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      #- name: Run a multi-line script
+      #  run: |
+      #    echo Add other actions to build,
+      #    echo test, and deploy your project.
