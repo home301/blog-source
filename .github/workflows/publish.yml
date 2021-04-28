@@ -49,6 +49,8 @@ jobs:
           cd blog
           pwd
           git remote add blog "https://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@github.com/Maznna/blog.git"
+          git config user.name "mingi-action"
+          git config user.email "mingi-action-no-reply@b.com"
           echo "here"
           git commit -m "auto commit by action"
           echo "here after commit"
