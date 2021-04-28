@@ -28,33 +28,21 @@ jobs:
       - name: prepare env
         run: pip install mkdocs
        
-      - name: move 
-        run: cd $GITHUB_WORKSPACE
-        
-      - name: check
-        run: pwd
-          
-      - name: delpoy
-        run: |
-          cd ..
+      - name: move
           git clone "https://github.com/Maznna/blog.git"
+          echo "clone"
           ls
           cd blog-source
           mkdocs build -d ../blog
+          echo "build"
           cd ../blog
           pwd
           git remote add blog "https://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@github.com/Maznna/blog.git"
           git config user.name "mingi-action"
           git config user.email "mingi-action-no-reply@b.com"
-          echo "here"
+          echo "configed"
           git add -A
-          echo "fetch"
+          echo "git add"
           git commit -m "auto commit by action"
-          echo "here after commit"
+          echo "after commit"
           git push blog --force
-
-      # Runs a set of commands using the runners shell
-      #- name: Run a multi-line script
-      #  run: |
-      #    echo Add other actions to build,
-      #    echo test, and deploy your project.
