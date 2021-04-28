@@ -45,7 +45,6 @@ jobs:
           cd ..
           git clone "https://github.com/Maznna/blog.git"
           ls
-          cp -rf ./blog-source/site ./blog
           cd blog
           pwd
           git remote add blog "https://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@github.com/Maznna/blog.git"
@@ -55,6 +54,7 @@ jobs:
           git add -A
           git fetch blog
           echo "fetch"
+          cp -rf ../blog-source/site ./
           git commit -m "auto commit by action"
           echo "here after commit"
           git push blog --force
