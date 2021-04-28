@@ -43,7 +43,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
-          PERSONAL_TOKEN: ${{secrets.AUTH_KEY}}
+          PERSONAL_TOKEN: ${{secrets.SEC_KEY}}
           PUBLISH_BRANCH: master
           PUBLISH_DIR: https://github.com/Maznna/blog
           SCRIPT_MODE: true
