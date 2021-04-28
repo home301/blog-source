@@ -40,14 +40,17 @@ jobs:
           mkdocs build
           ls
           
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2.5.0
-        env:
-          PERSONAL_TOKEN: ${{secrets.SEC_KEY}}
-          PUBLISH_BRANCH: master
-          PUBLISH_DIR: https://github.com/Maznna/blog
-          SCRIPT_MODE: true
-      
+      - name: delpoy
+        run: |
+          cd ..
+          git remote add blog "https://${{ secrets.GH_TOKEN}}@github.com/Maznna/blog.git"
+          git clone blog
+          cp -rf ./blog-source/site ./blog
+          cd blog
+          git -f commit -m "auto commit by action"
+          git config user.name "github deploy action"
+          git config user.email "a@b.com"
+          git push blog
 
 
       # Runs a set of commands using the runners shell
