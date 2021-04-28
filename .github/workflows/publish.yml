@@ -29,6 +29,7 @@ jobs:
         run: pip install mkdocs
        
       - name: move
+        run: |
           git clone "https://github.com/Maznna/blog.git"
           echo "clone"
           ls
