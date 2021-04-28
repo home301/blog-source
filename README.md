@@ -7,4 +7,6 @@
 mkdocs serve
 mkdocs build
 ```
+스크립트 작성 중
+
 https://www.mkdocs.org/#installation
