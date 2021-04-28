@@ -52,8 +52,8 @@ jobs:
           echo "here"
           git commit -m "auto commit by action"
           echo "here after commit"
-          git config user.name "github deploy action"
-          git config user.email "a@b.com"
+          git config user.name "mingi"
+          git config user.email "action-no-reply@b.com"
           echo "here before push"
           git push blog --force
 
