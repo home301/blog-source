@@ -47,11 +47,14 @@ jobs:
           ls
           cp -rf ./blog-source/site ./blog
           cd blog
+          pwd
           git remote add blog "https://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@github.com/Maznna/blog.git"
           echo "here"
           git commit -m "auto commit by action"
+          echo "here after commit"
           git config user.name "github deploy action"
           git config user.email "a@b.com"
+          echo "here before push"
           git push blog --force
 
       # Runs a set of commands using the runners shell
