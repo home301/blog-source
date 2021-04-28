@@ -28,8 +28,9 @@ jobs:
       - name: prepare env
         run: pip install mkdocs
        
-      - name: move
+      - name: deploy
         run: |
+          cd $GITHUB_WORKSPACE/..
           git clone "https://github.com/Maznna/blog.git"
           echo "clone"
           ls
