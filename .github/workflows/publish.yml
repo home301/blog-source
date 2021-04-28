@@ -33,28 +33,21 @@ jobs:
         
       - name: check
         run: pwd
-         
-      - name: test
-        run: |
-          ls
-          mkdocs build
-          ls
           
       - name: delpoy
         run: |
           cd ..
           git clone "https://github.com/Maznna/blog.git"
           ls
-          cd blog
+          mkdocs build -d ../blog
           pwd
+          cd blog
           git remote add blog "https://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@github.com/Maznna/blog.git"
           git config user.name "mingi-action"
           git config user.email "mingi-action-no-reply@b.com"
           echo "here"
           git add -A
-          git fetch blog
           echo "fetch"
-          cp -rf ../blog-source/site ./
           git commit -m "auto commit by action"
           echo "here after commit"
           git push blog --force
