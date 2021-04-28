@@ -52,6 +52,8 @@ jobs:
           git config user.name "mingi-action"
           git config user.email "mingi-action-no-reply@b.com"
           echo "here"
+          git fetch blog
+          echo "fetch"
           git commit -m "auto commit by action"
           echo "here after commit"
           git push blog --force
