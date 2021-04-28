@@ -43,8 +43,8 @@ jobs:
       - name: delpoy
         run: |
           cd ..
+          git clone "https://github.com/Maznna/blog.git"
           git remote add blog "https://${{ secrets.GH_TOKEN}}@github.com/Maznna/blog.git"
-          git clone blog
           cp -rf ./blog-source/site ./blog
           cd blog
           git -f commit -m "auto commit by action"
