@@ -20,3 +20,4 @@ https://www.mkdocs.org/#installation
 ```bash
 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
 ```
+주소는 맨날 까먹어 : https://maznna.github.io/blog/
