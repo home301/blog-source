@@ -363,8 +363,6 @@ class RobustCache:
 | **3편** | 캐시 교체 정책 | LRU/LFU/ARC/W-TinyLFU, 캐시 친화 코드 |
 | **4편** | 캐시 스탬피드와 해법 | Stampede/Penetration/Avalanche 방어 |
 
-캐시는 **"자주 쓰는 것을 가까이 두자"**라는 단순한 아이디어에서 시작하지만, 제대로 다루려면 하드웨어부터 분산 시스템까지 폭넓은 이해가 필요하다.
-
 
 
 ---

@@ -291,7 +291,7 @@ struct Entities {
 
 ## 다음 편 예고
 
-**4편: 캐시 스탬피드 — 서버를 죽이는 눈사태와 해법**에서는 Cache Stampede, Penetration, Avalanche 문제와 뮤텍스 락, 확률적 조기 만료, Bloom Filter 등 실전 방어 패턴을 다룬다.
+**4편: 캐시 스탬피드 — 상황과 해법**에서는 Cache Stampede, Penetration, Avalanche 문제와 뮤텍스 락, 확률적 조기 만료, Bloom Filter 등 실전 방어 패턴을 다룬다.
 
 ---
 
