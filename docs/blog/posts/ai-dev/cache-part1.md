@@ -61,31 +61,17 @@ tags:
 
 ### 3-1. 메모리 계층 구조 (Memory Hierarchy)
 
-컴퓨터의 저장 장치는 계층적으로 구성된다:
+컴퓨터의 저장 장치는 계층적으로 구성된다. 위로 갈수록 빠르고 작고 비싸며, 아래로 갈수록 느리고 크고 저렴하다.
 
-```mermaid
-block-beta
-    columns 1
-    block:hierarchy
-        A["레지스터 (~1ns, 수KB)"]
-        B["L1 캐시 (1~4 cycle, 32~64KB)"]
-        C["L2 캐시 (3~10ns, 256KB~1MB)"]
-        D["L3 캐시 (10~30ns, 4~64MB)"]
-        E["메인 메모리 (50~100ns, 8~64GB)"]
-        F["SSD (~100μs, 256GB~4TB)"]
-        G["HDD (~10ms, 1~20TB)"]
-    end
-
-    style A fill:#e74c3c,color:#fff
-    style B fill:#e67e22,color:#fff
-    style C fill:#f39c12,color:#fff
-    style D fill:#f1c40f,color:#000
-    style E fill:#2ecc71,color:#fff
-    style F fill:#3498db,color:#fff
-    style G fill:#2c3e50,color:#fff
-```
-
-위로 갈수록 빠르고, 용량이 작고, 비싸다. 아래로 갈수록 느리고, 용량이 크고, 저렴하다.
+| 계층 | 속도 | 용량 |
+|------|------|------|
+| 레지스터 | ~1ns | 수 KB |
+| L1 캐시 | 1~4 cycle | 32~64KB |
+| L2 캐시 | 3~10ns | 256KB~1MB |
+| L3 캐시 | 10~30ns | 4~64MB |
+| 메인 메모리 | 50~100ns | 8~64GB |
+| SSD | ~100μs | 256GB~4TB |
+| HDD | ~10ms | 1~20TB |
 
 이것은 물리적 한계 때문이다. 빠른 메모리는 물리적으로 CPU에 가까이 있어야 하고, 가까이 있으려면 크기가 작아야 한다. SRAM(캐시에 사용)은 DRAM(메인 메모리)보다 훨씬 빠르지만, 같은 용량을 만드는 데 수십 배의 비용과 면적이 필요하다.
 
