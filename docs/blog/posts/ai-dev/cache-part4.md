@@ -138,7 +138,7 @@ def get_with_eager_refresh(key, ttl=600, refresh_ratio=0.8):
   → 다음 요청에도 또 DB 조회!
 ```
 
-이것은 의도적인 **공격(DDoS)**에도 악용될 수 있다.
+이것은 의도적인 **공격**(DDoS)에도 악용될 수 있다.
 
 ### 해법 1: Null 캐싱
 
