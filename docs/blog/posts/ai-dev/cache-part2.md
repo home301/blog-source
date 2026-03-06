@@ -222,7 +222,7 @@ Cache-Control: no-store
 전 세계에 분산된 서버 네트워크에 콘텐츠 사본을 배치하여, 사용자와 **물리적으로 가까운 서버**에서 응답한다.
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#f0f0f0', 'primaryBorderColor': '#ccc', 'primaryTextColor': '#333', 'lineColor': '#ccc', 'edgeLabelBackground': 'transparent'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#f0f0f0', 'primaryBorderColor': '#ccc', 'primaryTextColor': '#333', 'lineColor': '#ccc'}}}%%
 graph LR
     Origin["원본 서버 (미국)"] --> Seoul["CDN 엣지 (서울)"]
     Origin --> Tokyo["CDN 엣지 (도쿄)"]
@@ -235,7 +235,7 @@ graph LR
 ### 동작 흐름
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#f0f0f0', 'primaryBorderColor': '#ccc', 'primaryTextColor': '#333', 'lineColor': '#ccc', 'edgeLabelBackground': 'transparent'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#f0f0f0', 'primaryBorderColor': '#ccc', 'primaryTextColor': '#333', 'lineColor': '#ccc'}}}%%
 graph TD
     A["사용자"] --> B["CDN 엣지"]
     B -->|Hit| C["즉시 응답 (원본 접촉 없음)"]
@@ -355,7 +355,7 @@ InnoDB의 Buffer Pool은 테이블과 인덱스 데이터를 메모리에 캐시
 ## 9. 전체 캐시 계층 요약
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#f0f0f0', 'primaryBorderColor': '#ccc', 'primaryTextColor': '#333', 'lineColor': '#ccc', 'edgeLabelBackground': 'transparent'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#f0f0f0', 'primaryBorderColor': '#ccc', 'primaryTextColor': '#333', 'lineColor': '#ccc'}}}%%
 graph TD
     A["사용자 클릭"] --> B{"브라우저 캐시 Hit?"}
     B -->|Yes| B1["즉시 표시"]
