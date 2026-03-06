@@ -8,7 +8,7 @@ tags:
   - series
 ---
 
-# 캐시의 모든 것 4편: 캐시 스탬피드 — 서버를 죽이는 눈사태와 해법
+# 캐시의 모든 것 4편: 캐시 스탬피드 — 상황과 해법
 
 > Cache Stampede, Penetration, Avalanche — 캐시가 오히려 장애를 일으키는 순간들
 
