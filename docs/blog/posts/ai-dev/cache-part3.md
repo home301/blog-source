@@ -280,12 +280,12 @@ struct Entities {
 
 | 정책 | 기준 | 히트율 | 복잡도 | 대표 사용처 |
 |------|------|--------|--------|-----------|
-| **LRU** | 최근 미사용 | ⭐⭐⭐⭐ | 보통 | CPU, Redis, Linux |
-| **LFU** | 사용 빈도 | ⭐⭐⭐⭐ | 보통 | Redis |
-| **FIFO** | 먼저 온 순서 | ⭐⭐⭐ | 낮음 | 임베디드 |
-| **Random** | 무작위 | ⭐⭐⭐ | 최저 | ARM, GPU |
-| **ARC** | 자가 적응 | ⭐⭐⭐⭐⭐ | 높음 | ZFS, PostgreSQL |
-| **W-TinyLFU** | 빈도+최근성 | ⭐⭐⭐⭐⭐ | 매우 높음 | Caffeine, Spring |
+| **LRU** | 최근 미사용 | 높음 | 보통 | CPU, Redis, Linux |
+| **LFU** | 사용 빈도 | 높음 | 보통 | Redis |
+| **FIFO** | 먼저 온 순서 | 보통 | 낮음 | 임베디드 |
+| **Random** | 무작위 | 보통 | 최저 | ARM, GPU |
+| **ARC** | 자가 적응 | 최고 | 높음 | ZFS, PostgreSQL |
+| **W-TinyLFU** | 빈도+최근성 | 최고 | 매우 높음 | Caffeine, Spring |
 
 ---
 
