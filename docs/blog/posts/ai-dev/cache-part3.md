@@ -234,12 +234,12 @@ Random     ████████████████          보통
 ```python
 # 1000 x 1000 2D 배열
 
-# ✅ 행 우선 — 캐시 친화적 (연속 메모리 접근)
+# 행 우선 — 캐시 친화적 (연속 메모리 접근)
 for i in range(1000):
     for j in range(1000):
         process(matrix[i][j])
 
-# ❌ 열 우선 — 캐시 비친화적 (1000칸씩 점프)
+# 열 우선 — 캐시 비친화적 (1000칸씩 점프)
 for j in range(1000):
     for i in range(1000):
         process(matrix[i][j])
@@ -250,11 +250,11 @@ for j in range(1000):
 ### 구조체 배열(AoS) vs 배열 구조체(SoA)
 
 ```c
-// ❌ AoS — 위치만 처리할 때 불필요한 데이터가 캐시 라인 차지
+// AoS — 위치만 처리할 때 불필요한 데이터가 캐시 라인 차지
 struct Entity { float x, y, z, vx, vy, vz; int hp, type; };
 Entity entities[10000];
 
-// ✅ SoA — 같은 필드끼리 연속, 캐시 라인 100% 활용
+// SoA — 같은 필드끼리 연속, 캐시 라인 100% 활용
 struct Entities {
     float x[10000], y[10000], z[10000];
     float vx[10000], vy[10000], vz[10000];
