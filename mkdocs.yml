@@ -1,18 +1,93 @@
-#title : mingi's blog
-#summary : notes for something.
-#site_authors : Mingi Choi
-#date : September 14, 2020
-copyright : 2020 Mingi Choi all right reserved.
-site_name: blog
-nav:
-    - Home: index.md
-    - 1: build-blog-using-mkdocs.md
-    - 2: data-structure.md
-    - 3: algorithm.md
-    - About: about.md
-theme: readthedocs
+site_name: Mingi's Dev Blog
+site_url: https://home301.github.io/blog/
+site_description: AI, 개발, 게임, 재테크 — 개발자의 기술 블로그
+site_author: Mingi Choi
+copyright: Copyright &copy; 2020-2026 Mingi Choi
+
+theme:
+  name: material
+  language: ko
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드로 전환
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드로 전환
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    logo: material/code-braces
+  font:
+    text: Noto Sans KR
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang:
+        - ko
+        - en
+  - blog:
+      blog_dir: blog
+      post_date_format: yyyy년 M월 d일
+      post_url_format: "{slug}"
+      categories: true
+      categories_allowed:
+        - AI/개발
+        - 재테크
+        - 생활리뷰
+        - 게임
+  - tags
+
 markdown_extensions:
-    - toc:
-          permalink: "#"
-          baselevel: 2
-          separator: "_"
+  - toc:
+      permalink: "#"
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - footnotes
+  - tables
+
+nav:
+  - Home: index.md
+  - Blog:
+      - blog/index.md
+  - About: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/home301
