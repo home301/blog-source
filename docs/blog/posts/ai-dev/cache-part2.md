@@ -263,7 +263,37 @@ graph TD
 
 ---
 
-## 6. 서버 캐시 — Redis와 Memcached
+## 6. 애플리케이션 로컬 캐시
+
+Redis 같은 원격 캐시에 접근하려면 네트워크 왕복이 필요하다. 부하가 높은 서비스에서는 이 왕복 비용도 부담이 된다. 그래서 **애플리케이션 프로세스 메모리에 직접 캐시를 두는** 방식을 사용한다.
+
+- **Java**: Caffeine, Guava Cache, EhCache
+- **Go**: Ristretto, BigCache
+- **Python**: `functools.lru_cache`, cachetools
+
+```python
+from cachetools import TTLCache
+
+# 최대 1000개 항목, TTL 60초
+local_cache = TTLCache(maxsize=1000, ttl=60)
+
+def get_user(user_id):
+    if user_id in local_cache:
+        return local_cache[user_id]  # 네트워크 왕복 없음
+    
+    # 로컬 캐시 미스 → Redis 조회 → DB 조회 순으로 이어짐
+    value = redis.get(f"user:{user_id}")
+    if value:
+        local_cache[user_id] = json.loads(value)
+        return local_cache[user_id]
+    ...
+```
+
+장점은 속도(마이크로초 단위)와 네트워크 장애에 대한 내성이다. 단점은 프로세스마다 캐시가 따로라 **일관성 관리가 어렵다**는 것이다. 보통 짧은 TTL(수십 초)을 두고 약간의 불일치를 허용하는 방식으로 운영한다.
+
+---
+
+## 7. 서버 캐시 — Redis와 Memcached
 
 서버 측에서 **DB 부하를 줄이기 위해** 사용하는 인메모리 캐시다.
 
@@ -302,7 +332,7 @@ def get_user(user_id):
 
 ---
 
-## 7. DB 캐시
+## 8. DB 캐시
 
 ### 쿼리 캐시
 
@@ -322,7 +352,7 @@ InnoDB의 Buffer Pool은 테이블과 인덱스 데이터를 메모리에 캐시
 
 ---
 
-## 8. 전체 캐시 계층 요약
+## 9. 전체 캐시 계층 요약
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#f0f0f0', 'primaryBorderColor': '#ccc', 'primaryTextColor': '#333', 'lineColor': '#ccc', 'edgeLabelBackground': 'transparent'}}}%%
@@ -333,11 +363,13 @@ graph TD
     C -->|Yes| C1["가까운 서버에서 응답"]
     C -->|No| D{"리버스 프록시 Hit?"}
     D -->|Yes| D1["원본 서버 부담 감소"]
-    D -->|No| E{"Redis/Memcached Hit?"}
-    E -->|Yes| E1["DB 조회 생략"]
-    E -->|No| F{"DB Buffer Pool Hit?"}
-    F -->|Yes| F1["디스크 I/O 생략"]
-    F -->|No| G["디스크 — 최종 원본 데이터"]
+    D -->|No| E{"앱 로컬 캐시 Hit?"}
+    E -->|Yes| E1["네트워크 왕복 없이 응답"]
+    E -->|No| F{"Redis/Memcached Hit?"}
+    F -->|Yes| F1["DB 조회 생략"]
+    F -->|No| H{"DB Buffer Pool Hit?"}
+    H -->|Yes| H1["디스크 I/O 생략"]
+    H -->|No| I["디스크 — 최종 원본 데이터"]
 ```
 
 **각 계층에서 캐시 히트가 발생할수록** 아래 계층의 부담이 줄어든다. 잘 설계된 시스템에서는 요청의 90% 이상이 브라우저나 CDN 레벨에서 처리된다.
@@ -353,6 +385,7 @@ graph TD
 | **OS** | 페이지 캐시, TLB | ~μs | 커널 |
 | **브라우저** | HTTP 캐시 | ~ms | HTTP 헤더 |
 | **CDN** | 엣지 캐시 | ~10ms | 설정/API |
+| **앱 로컬** | 프로세스 내 캐시 (Caffeine, Guava 등) | ~μs | 개발자 |
 | **서버** | Redis/Memcached | ~1ms | 개발자 |
 | **DB** | Buffer Pool | ~μs | DB 설정 |
 
