@@ -148,6 +148,7 @@ E 접근: [E, B, C, D]  ← A가 가장 먼저 → A 교체
 IBM 연구소에서 2003년 발표. **두 개의 LRU 리스트**를 운영한다.
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#f0f0f0', 'primaryBorderColor': '#ccc', 'primaryTextColor': '#333', 'lineColor': '#ccc', 'edgeLabelBackground': 'transparent'}}}%%
 graph LR
     subgraph ARC
         direction TB
@@ -187,6 +188,7 @@ graph LR
 Google에서 영감을 받아 설계. **Caffeine** (Java 캐시 라이브러리)에서 사용한다.
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#f0f0f0', 'primaryBorderColor': '#ccc', 'primaryTextColor': '#333', 'lineColor': '#ccc', 'edgeLabelBackground': 'transparent'}}}%%
 graph LR
     W["Window Cache
     (1%, LRU)"] --> F{"TinyLFU Filter
