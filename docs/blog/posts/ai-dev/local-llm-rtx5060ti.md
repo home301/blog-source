@@ -117,7 +117,9 @@ ollama run qwen2.5:7b
 
 ### MoE 모델: Qwen3.5-35B-A3B
 
-MoE(Mixture of Experts) 모델은 전체 파라미터는 크지만 추론 시 일부만 활성화된다. 35B 파라미터 중 3B만 활성화되므로 VRAM 소비가 적으면서 성능은 높다.
+MoE(Mixture of Experts) 모델은 전체 파라미터 크기는 크지만 추론 시 일부만(활성 파라미터) 연산에 참여한다. 35B 파라미터 중 3B만 활성화되므로 VRAM에서 실제로 연산에 쓰이는 비중은 적으며 성능은 강력하다. 
+
+단, 연산 시 사용되는 VRAM은 약 4GB 수준이더라도, **실제 모델의 가중치(약 10~20GB 이상) 전체 데이터는 시스템 RAM이나 VRAM 어딘가에 적재(Offloading)되어 있어야** 하므로 PC 전체의 가용 메모리 상태를 충분히 확보해야 한다.
 
 ```bash
 ollama pull qwen3.5:35b-a3b

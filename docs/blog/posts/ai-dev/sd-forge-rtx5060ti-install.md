@@ -97,7 +97,7 @@ bash webui.sh --xformers --skip-torch-cuda-test --skip-python-version-check
 
 여기서 한 가지 함정이 있다. 설치 완료 후 WebUI가 정상적으로 뜨는 것처럼 보이지만, 실제로는 **"Using online LoRAs in FP16: False"** 메시지 이후 조용히 멈춘다. 에러 메시지도 없다.
 
-원인은 PyTorch nightly와 Gradio 간의 호환 문제로 추정된다. 해결책은 **API 모드로 실행**하는 것이다.
+원인은 PyTorch nightly 환경에서 모델 로드 시점의 의존성 프리징(특히 xformers나 어텐션 연산 관련 최적화) 문제로 추정된다. 해결책은 **API 모드로 실행**하는 것이다.
 
 ```bash
 python launch.py --nowebui --api --listen --port 7861 \

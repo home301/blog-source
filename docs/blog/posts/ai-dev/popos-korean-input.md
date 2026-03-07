@@ -75,7 +75,9 @@ export QT_IM_MODULE=fcitx
 export XMODIFIER=@im=fcitx
 ```
 
-이 3종 세트가 없으면 fcitx5를 설치해도 앱에서 한글이 안 먹힌다. **가장 많이 빠뜨리는 부분**이니까 꼭 확인하자.
+이 3종 세트가 없으면 fcitx5를 설치해도 터미널에서 실행하는 앱 외에는 한글이 제대로 안 먹힐 수 있다. **가장 많이 빠뜨리는 부분**이니까 꼭 확인하자.
+
+> **더 확실한 팁:** `~/.bashrc`는 쉘을 거치는 프로세스에만 주로 적용된다. Wayland 환경의 GUI 앱 전역에 일관되게 주입하려면 `/etc/environment` 파일에 위 세 줄을 (export 빼고) 적어두는 것이 더 근본적인 해결책이다.
 
 ```bash
 source ~/.bashrc
