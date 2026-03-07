@@ -25,5 +25,14 @@ jobs:
           pip install mkdocs-material
           pip install mkdocs-blog-plugin || true
 
-      - name: Build & Deploy
-        run: mkdocs gh-deploy --force --remote-name origin
+      - name: Build site
+        run: mkdocs build
+
+      - name: Deploy to external repository
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.GH_PAT }}
+          external_repository: home301/blog
+          publish_branch: main
+          publish_dir: ./site
+          commit_message: ${{ github.event.head_commit.message }}
