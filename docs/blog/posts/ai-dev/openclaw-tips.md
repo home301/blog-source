@@ -33,30 +33,11 @@ tags:
 
 ## GPU가 죽었는데 살릴 수가 없다
 
-로컬 LLM(Ollama)으로 큰 모델을 올리다가 VRAM이 넘쳤다. CUDA 크래시가 나면서 `nvidia-smi`가 응답하지 않게 됐다.
+VRAM 초과로 GPU 크래시가 나면 소프트 리부트로는 복구가 안 된다. 콜드부팅(전원 완전 차단 후 재시작)이 필요한데, 원격 환경에서 이걸 자동화하는 게 꽤 까다로웠다. BIOS 설정 변경, 온보드 그래픽 문제, 크래시 재현 시도 등 자세한 내용은 별도 글에 정리했다.
 
-`sudo reboot`를 해봤지만 소용없었다. 소프트 리부트로는 GPU가 복구되지 않는다. **전원을 완전히 끄고 다시 켜야** 한다.
+> [Linux에서 GPU 크래시 후 자동 복구하기 — rtcwake 콜드부팅](../linux-gpu-cold-reboot.md)
 
-모니터 앞에 있으면 전원 버튼을 누르면 되지만, 원격 접속 중이라 그럴 수 없었다. 찾아보니 RTC wake라는 게 있었다:
-
-```bash
-sudo rtcwake -m off -s 60
-```
-
-전원을 완전히 차단하고 60초 후에 자동으로 켜진다. 이걸 에이전트에게 가르쳐둬서, GPU 크래시를 감지하면 알아서 콜드 부트를 하고 복귀 후 상태를 보고하게 했다.
-
-재발 방지로 Ollama의 VRAM 제한을 걸었다:
-
-```bash
-sudo systemctl edit ollama
-```
-
-```ini
-[Service]
-Environment="OLLAMA_MAX_VRAM=14G"
-```
-
-16GB 중 14GB만 쓰게 하고, GPU를 쓰는 프로그램(Ollama, Forge, ComfyUI)은 동시에 하나만 실행하는 규칙도 추가했다.
+재발 방지로 Ollama VRAM 제한(`OLLAMA_MAX_VRAM=14G`)을 걸고, GPU를 쓰는 프로그램(Ollama, Forge, ComfyUI)은 동시에 하나만 실행하는 규칙을 추가했다.
 
 ---
 
