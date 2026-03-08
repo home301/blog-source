@@ -171,20 +171,15 @@ print(response.choices[0].message.content)
 
 ## VRAM 초과 시 주의
 
-VRAM 한계를 넘는 모델을 무리하게 올리면 CUDA 크래시가 발생할 수 있다. 이 경우 드라이버가 죽어서 `nvidia-smi`도 응답하지 않게 된다.
-
-소프트 리부트로는 복구되지 않고 **콜드 부트**(전원 완전 차단 후 재시작)가 필요하다.
-
-```bash
-# RTC wake를 이용한 콜드 부트 (60초 후 자동 재시작)
-sudo rtcwake -m off -s 60
-```
-
-이런 상황을 피하려면:
+VRAM 한계를 넘는 모델을 무리하게 올리면 GPU 크래시가 발생할 수 있다. 이런 상황을 피하려면:
 
 1. `OLLAMA_MAX_VRAM` 설정으로 VRAM 한도를 제한
 2. 모델의 VRAM 요구량을 사전에 확인
 3. Stable Diffusion 등 다른 GPU 프로그램과 **동시 실행 금지**
+
+GPU 크래시가 발생했을 때의 복구 방법(콜드부팅, BIOS 설정 등)은 별도 글에서 다룬다.
+
+> [Linux에서 GPU 크래시 후 자동 복구하기 — rtcwake 콜드부팅](../linux-gpu-cold-reboot.md)
 
 ---
 
