@@ -8,6 +8,7 @@ tags:
   - ai-image
   - pytorch
 slug: sd-forge-rtx5060ti-install
+description: "RTX 50 시리즈 초기 사용자가 겪는 PyTorch 호환 삽질의 기록."
 ---
 
 # RTX 5060 Ti 16GB에 Stable Diffusion Forge 설치하기

@@ -8,6 +8,7 @@ tags:
   - telegram
   - claude
 slug: openclaw-personal-assistant
+description: "텔레그램으로 대화하면 Claude가 내 서버에서 파일을 읽고, 명령어를 실행하고, 이미지를 보내주는 환경을 구축한다."
 ---
 
 # OpenClaw으로 개인 AI 비서 만들기 — 텔레그램 + Claude

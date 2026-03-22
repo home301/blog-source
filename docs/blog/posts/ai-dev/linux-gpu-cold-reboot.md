@@ -10,6 +10,7 @@ tags:
   - cold-boot
   - msi-bios
 slug: linux-gpu-cold-reboot
+description: "RTX 5060 Ti로 AI 이미지를 생성하다 GPU가 먹통이 됐다. 소프트 리부트로는 안 살아나고, 전원을 완전히 끄는 콜드부팅만이 답이었다. 원격 환경에서 이걸 자동화한 기록."
 ---
 
 # Linux에서 GPU 크래시 후 자동 복구하기 — rtcwake 콜드부팅

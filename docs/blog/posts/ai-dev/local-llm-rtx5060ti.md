@@ -8,6 +8,7 @@ tags:
   - rtx5060ti
   - qwen
 slug: local-llm-rtx5060ti
+description: "클라우드 API 없이 내 GPU에서 LLM을 돌린다."
 ---
 
 # RTX 5060 Ti 16GB로 로컬 LLM 돌리기 — Ollama + Qwen
