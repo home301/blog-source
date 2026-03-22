@@ -7,6 +7,7 @@ tags:
   - popos
   - korean
   - fcitx5
+slug: popos-korean-input
 ---
 
 # Pop!_OS 24.04 LTS 설치 후 한글 입력 해결기 — fcitx5가 답이다

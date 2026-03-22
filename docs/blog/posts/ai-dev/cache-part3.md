@@ -6,6 +6,7 @@ tags:
   - cache
   - backend
   - series
+slug: cache-part3
 ---
 
 # 캐시의 모든 것 3편: 캐시 교체 정책 완벽 정리

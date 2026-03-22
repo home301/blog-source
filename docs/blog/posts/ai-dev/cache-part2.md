@@ -6,6 +6,7 @@ tags:
   - cache
   - backend
   - series
+slug: cache-part2
 ---
 
 # 캐시의 모든 것 2편: CPU부터 CDN까지 — 캐시가 쓰이는 모든 곳

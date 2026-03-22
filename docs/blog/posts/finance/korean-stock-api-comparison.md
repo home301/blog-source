@@ -9,6 +9,7 @@ tags:
   - 자동매매
   - 데이터수집
   - python
+slug: korean-stock-api-comparison
 ---
 
 # 한국 증권사 Open API 비교 분석 (2026)

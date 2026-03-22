@@ -7,6 +7,7 @@ tags:
   - ollama
   - rtx5060ti
   - qwen
+slug: local-llm-rtx5060ti
 ---
 
 # RTX 5060 Ti 16GB로 로컬 LLM 돌리기 — Ollama + Qwen
