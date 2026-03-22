@@ -33,6 +33,6 @@ jobs:
         with:
           personal_token: ${{ secrets.GH_PAT }}
           external_repository: home301/blog
-          publish_branch: main
+          publish_branch: master
           publish_dir: ./site
           commit_message: ${{ github.event.head_commit.message }}
