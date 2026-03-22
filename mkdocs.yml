@@ -6,6 +6,7 @@ copyright: Copyright &copy; 2020-2026 Mingi Choi
 
 theme:
   name: material
+  custom_dir: overrides
   language: ko
   palette:
     - media: "(prefers-color-scheme: light)"
