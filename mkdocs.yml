@@ -88,6 +88,9 @@ nav:
   - About: about.md
 
 extra:
+  analytics:
+    provider: google
+    property: G-DTNKMZSB8M
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/home301
