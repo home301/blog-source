@@ -12,6 +12,8 @@ tags:
 
 > Cache Stampede, Penetration, Avalanche — 캐시가 오히려 장애를 일으키는 순간들
 
+<!-- more -->
+
 ---
 
 ## 들어가며
