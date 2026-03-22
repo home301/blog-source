@@ -86,6 +86,7 @@ nav:
   - Blog:
       - blog/index.md
   - About: about.md
+  - 개인정보처리방침: privacy.md
 
 extra:
   analytics:
