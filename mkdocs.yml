@@ -81,7 +81,9 @@ markdown_extensions:
   - tables
 
 nav:
-  - Blog: blog/
+  - Home: index.md
+  - Blog:
+      - blog/index.md
   - About: about.md
 
 extra:
