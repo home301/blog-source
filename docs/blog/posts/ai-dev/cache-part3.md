@@ -7,6 +7,7 @@ tags:
   - backend
   - series
 slug: cache-part3
+description: "LRU부터 W-TinyLFU까지 — 캐시가 꽉 찼을 때 무엇을 버릴 것인가"
 ---
 
 # 캐시의 모든 것 3편: 캐시 교체 정책 완벽 정리

@@ -7,6 +7,7 @@ tags:
   - backend
   - series
 slug: cache-part4
+description: "Cache Stampede, Penetration, Avalanche — 캐시가 오히려 장애를 일으키는 순간들"
 ---
 
 # 캐시의 모든 것 4편: 캐시 스탬피드 — 상황과 해법

@@ -7,6 +7,7 @@ tags:
   - ai-assistant
   - tips
 slug: openclaw-tips
+description: "AI 비서를 붙여놓고 쓰면서 겪은 문제와 나름의 해결 방법을 정리한다."
 ---
 
 # OpenClaw 한 달 사용기 — 삽질하면서 배운 것들

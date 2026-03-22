@@ -8,6 +8,7 @@ tags:
   - ai-image
   - pytorch
 slug: comfyui-rtx5060ti-install
+description: "노드 기반 워크플로우로 이미지 생성 파이프라인을 구축한다."
 ---
 
 # RTX 5060 Ti 16GB에 ComfyUI 설치하기

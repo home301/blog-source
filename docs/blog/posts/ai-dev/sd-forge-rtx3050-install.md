@@ -8,6 +8,7 @@ tags:
   - ai-image
   - tutorial
 slug: sd-forge-rtx3050-install
+description: "VRAM 6GB GPU로 AI 이미지 생성이 가능한지 직접 설치하고 돌려봤다."
 ---
 
 # RTX 3050 6GB로 Stable Diffusion Forge 설치하기

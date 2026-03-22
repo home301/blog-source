@@ -7,6 +7,7 @@ tags:
   - backend
   - series
 slug: cache-part2
+description: "하드웨어부터 소프트웨어까지, 캐시가 동작하는 모든 계층을 정리한다."
 ---
 
 # 캐시의 모든 것 2편: CPU부터 CDN까지 — 캐시가 쓰이는 모든 곳

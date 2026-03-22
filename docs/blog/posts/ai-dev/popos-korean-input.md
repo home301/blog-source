@@ -8,6 +8,7 @@ tags:
   - korean
   - fcitx5
 slug: popos-korean-input
+description: "Pop!_OS 24.04에서 한글 입력을 설정하는 과정을 정리한다. COSMIC DE + Wayland 환경 기준."
 ---
 
 # Pop!_OS 24.04 LTS 설치 후 한글 입력 해결기 — fcitx5가 답이다
