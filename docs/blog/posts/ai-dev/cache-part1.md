@@ -6,6 +6,7 @@ tags:
   - cache
   - backend
   - series
+slug: cache-part1
 ---
 
 # 캐시의 모든 것 1편: 캐시란 무엇이고, 왜 쓰는가

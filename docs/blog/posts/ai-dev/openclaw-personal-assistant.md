@@ -7,6 +7,7 @@ tags:
   - ai-assistant
   - telegram
   - claude
+slug: openclaw-personal-assistant
 ---
 
 # OpenClaw으로 개인 AI 비서 만들기 — 텔레그램 + Claude

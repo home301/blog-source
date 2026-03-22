@@ -9,6 +9,7 @@ tags:
   - rtcwake
   - cold-boot
   - msi-bios
+slug: linux-gpu-cold-reboot
 ---
 
 # Linux에서 GPU 크래시 후 자동 복구하기 — rtcwake 콜드부팅

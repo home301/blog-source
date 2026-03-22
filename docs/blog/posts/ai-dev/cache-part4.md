@@ -6,6 +6,7 @@ tags:
   - cache
   - backend
   - series
+slug: cache-part4
 ---
 
 # 캐시의 모든 것 4편: 캐시 스탬피드 — 상황과 해법

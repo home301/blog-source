@@ -7,6 +7,7 @@ tags:
   - rtx3050
   - ai-image
   - tutorial
+slug: sd-forge-rtx3050-install
 ---
 
 # RTX 3050 6GB로 Stable Diffusion Forge 설치하기

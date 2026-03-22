@@ -7,6 +7,7 @@ tags:
   - rtx5060ti
   - ai-image
   - pytorch
+slug: comfyui-rtx5060ti-install
 ---
 
 # RTX 5060 Ti 16GB에 ComfyUI 설치하기

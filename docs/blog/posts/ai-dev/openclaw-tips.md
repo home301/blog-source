@@ -6,6 +6,7 @@ tags:
   - openclaw
   - ai-assistant
   - tips
+slug: openclaw-tips
 ---
 
 # OpenClaw 한 달 사용기 — 삽질하면서 배운 것들
