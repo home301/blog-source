@@ -1,5 +1,5 @@
 site_name: Mingi's Dev Blog
-site_url: https://home301.github.io/blog/
+site_url: https://home301.dev/
 site_description: AI, 개발, 게임 — 개발자의 기술 블로그
 site_author: Mingi Choi
 copyright: Copyright &copy; 2020-2026 Mingi Choi
@@ -88,6 +88,9 @@ nav:
   - About: about.md
 
 extra:
+  analytics:
+    provider: google
+    property: G-DTNKMZSB8M
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/home301

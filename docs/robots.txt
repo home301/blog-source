@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://home301.dev/sitemap.xml
