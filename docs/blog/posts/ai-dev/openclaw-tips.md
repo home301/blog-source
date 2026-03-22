@@ -36,7 +36,7 @@ slug: openclaw-tips
 
 VRAM 초과로 GPU 크래시가 나면 소프트 리부트로는 복구가 안 된다. 콜드부팅(전원 완전 차단 후 재시작)이 필요한데, 원격 환경에서 이걸 자동화하는 게 꽤 까다로웠다. BIOS 설정 변경, 온보드 그래픽 문제, 크래시 재현 시도 등 자세한 내용은 별도 글에 정리했다.
 
-> [Linux에서 GPU 크래시 후 자동 복구하기 — rtcwake 콜드부팅](../linux-gpu-cold-reboot.md)
+> [Linux에서 GPU 크래시 후 자동 복구하기 — rtcwake 콜드부팅](../ai-dev/linux-gpu-cold-reboot.md)
 
 재발 방지로 Ollama VRAM 제한(`OLLAMA_MAX_VRAM=14G`)을 걸고, GPU를 쓰는 프로그램(Ollama, Forge, ComfyUI)은 동시에 하나만 실행하는 규칙을 추가했다.
 
