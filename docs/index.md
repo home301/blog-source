@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Mingi's Dev Blog
+# Home301 Dev Blog
 
 AI, 개발, 게임 개발 — 개발자의 기술 블로그입니다.
 
