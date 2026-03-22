@@ -25,8 +25,8 @@ jobs:
           pip install mkdocs-material
           pip install mkdocs-blog-plugin || true
 
-      - name: Build site
-        run: mkdocs build
+      - name: Build site (strict mode)
+        run: mkdocs build --strict
 
       - name: Deploy to external repository
         uses: peaceiris/actions-gh-pages@v4
