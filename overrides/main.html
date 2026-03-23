@@ -15,6 +15,36 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ page.title }} - {{ config.site_name }}">
   <meta name="twitter:description" content="{{ page.meta.description | default(config.site_description) if page.meta else config.site_description }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://home301.dev/#website",
+        "url": "https://home301.dev/",
+        "name": "Home301 Dev Blog",
+        "alternateName": ["home301", "Home 301", "Home301 Dev", "home301.dev", "Home301 Dev Blog"],
+        "description": "{{ config.site_description }}",
+        "inLanguage": "ko-KR",
+        "publisher": {
+          "@id": "https://home301.dev/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://home301.dev/#organization",
+        "name": "home301",
+        "alternateName": ["Home301", "Home 301", "Home301 Dev", "Home301 Dev Blog"],
+        "url": "https://home301.dev/",
+        "sameAs": [
+          "https://github.com/home301"
+        ]
+      }
+    ]
+  }
+  </script>
 {% endif %}
 {% endblock %}
 

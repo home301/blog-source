@@ -1,4 +1,5 @@
 ---
+description: "home301 — AI, 개발, 게임을 다루는 개발자 기술 블로그. Stable Diffusion, Linux, GPU 환경 구축 등 실전 기록."
 hide:
   - navigation
   - toc
@@ -6,7 +7,7 @@ hide:
 
 # Home301 Dev Blog
 
-AI, 개발, 게임 개발 — 개발자의 기술 블로그입니다.
+home301은 AI, 개발, 게임을 다루는 기술 블로그다. 직접 부딪힌 삽질과 해결 과정을 기록한다.
 
 ---
 
