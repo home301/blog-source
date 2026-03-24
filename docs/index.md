@@ -13,14 +13,18 @@ home301은 AI, 개발, 게임, 그 외 소소한 것들을 담는 블로그다. 
 
 ## 최신 글
 
-### [Linux에서 GPU 크래시 후 자동 복구하기 — rtcwake 콜드부팅](blog/linux-gpu-cold-reboot/)
-> RTX 5060 Ti로 AI 이미지를 생성하다 GPU가 먹통이 됐다. 원격 환경에서 콜드부팅을 자동화한 기록.
+<!-- LATEST_POSTS_START -->
 
-### [RTX 5060 Ti 16GB에 Stable Diffusion Forge 설치하기](blog/sd-forge-rtx5060ti-install/)
-> RTX 50 시리즈 초기 사용자가 겪는 PyTorch 호환 삽질의 기록.
+### [1화. 첫 생성 — 프롬프트만 넣으면 되는 거 아니야?](blog/ai-image-guide-01-first-gen/)
+> AI 이미지 생성 첫 걸음. 모델 선택부터 프롬프트, 해상도, CFG까지 삽질하며 배운 기초를 정리한다.
 
-### [RTX 5060 Ti 16GB에 ComfyUI 설치하기](blog/comfyui-rtx5060ti-install/)
-> 노드 기반 워크플로우로 이미지 생성 파이프라인을 구축한다.
+### [블로그 플랫폼 비교 — 그래도 GitHub Pages를 선택한 이유](blog/free-blog-1-why-github-pages/)
+> 무료 블로그 플랫폼을 비교하고, GitHub Pages를 선택한 이유를 정리한다.
+
+### [Linux에서 GPU 크래시 후 자동 복구를 시도하다 — rtcwake 콜드부팅의 한계](blog/linux-gpu-cold-reboot/)
+> RTX 5060 Ti GPU 크래시 후 rtcwake 콜드부팅으로 자동 복구를 시도했으나, 1회 콜드부팅만으로는 GPU 드라이버가 완전히 초기화되지 않아 실패한 기록.
+
+<!-- LATEST_POSTS_END -->
 
 ---
 
