@@ -19,5 +19,4 @@ home301은 "홈 서버 301번지"에서 출발했다. 개인 서버에서 시작
 
 ## Contact
 
-- GitHub: [home301](https://github.com/home301)
-- Blog: [home301.dev](https://home301.dev)
+- [GitHub](https://github.com/home301)
