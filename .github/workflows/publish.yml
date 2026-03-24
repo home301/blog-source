@@ -25,6 +25,9 @@ jobs:
           pip install mkdocs-material
           pip install mkdocs-blog-plugin || true
 
+      - name: Update home page with latest posts
+        run: python scripts/update_home.py
+
       - name: Build site (strict mode)
         run: mkdocs build --strict
 

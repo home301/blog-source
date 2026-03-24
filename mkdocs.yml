@@ -33,7 +33,7 @@ theme:
     - content.code.copy
     - content.code.annotate
   icon:
-    logo: material/code-braces
+    logo: material/home
   font:
     text: Noto Sans KR
     code: JetBrains Mono
