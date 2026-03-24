@@ -52,6 +52,7 @@ plugins:
         - AI/개발
         - 생활리뷰
         - 게임
+        - 재테크
   - tags
 
 markdown_extensions:
