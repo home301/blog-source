@@ -1,6 +1,5 @@
 ---
 date: 2026-03-23
-draft: true
 categories:
   - AI/개발
 tags:

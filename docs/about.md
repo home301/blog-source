@@ -1,10 +1,8 @@
 ---
-description: "home301은 AI, 개발, 게임을 다루는 개발자 기술 블로그다. Stable Diffusion, Linux, GPU 환경 구축 등 실전 경험을 기록한다."
+description: "home301은 AI, 개발, 게임을 다루는 개발자 블로그다. Stable Diffusion, Linux, GPU 환경 구축 등 실전 경험을 기록한다."
 ---
 
 # About
-
-home301은 개발자 Mingi가 운영하는 기술 블로그다.
 
 AI 도구 활용, 로컬 GPU 환경 구축, Linux 시스템 관리 등 직접 부딪히며 얻은 실전 경험을 기록한다. 검색해도 안 나오는 삽질의 해법, 공식 문서가 알려주지 않는 현실적인 팁을 다룬다.
 
