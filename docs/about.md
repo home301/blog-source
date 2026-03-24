@@ -1,5 +1,5 @@
 ---
-description: "home301은 AI, 개발, 게임을 다루는 개발자 블로그다. Stable Diffusion, Linux, GPU 환경 구축 등 실전 경험을 기록한다."
+description: "home301은 AI, 개발, 게임, 그 외 소소한 것들을 담는 블로그다. 알고 있던 걸 정리하거나, 직접 삽질하고 해결해 나가는 과정을 기록한다."
 ---
 
 # About
