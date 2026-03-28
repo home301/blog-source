@@ -282,4 +282,4 @@ mutated hands, extra limbs, cloned face
 
 ---
 
-*다음: [2화. 구도와 포즈 -- ControlNet 입문]*
+*다음: [2화. 구도와 포즈 — ControlNet 입문](ai-image-guide-02-controlnet.md)*
