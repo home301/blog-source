@@ -24,7 +24,7 @@ description: "무료 블로그 플랫폼을 비교하고, GitHub Pages를 선택
 | 편 | 제목 |
 |---|------|
 | **1** | **블로그 플랫폼 비교 — 그래도 GitHub Pages를 선택한 이유** |
-| 2 | MkDocs Material 설치부터 첫 글 배포까지 |
+| 2 | [MkDocs Material 설치부터 첫 글 배포까지](free-blog-2-mkdocs-material-setup.md) |
 | 3 | GitHub Actions로 자동 빌드/배포 파이프라인 구축하기 |
 | 4 | 커스텀 도메인 연결하기 — Cloudflare + GitHub Pages |
 | 5 | SEO와 분석 도구 연동 — 검색에 노출되는 블로그 |
@@ -251,13 +251,13 @@ GitHub Pages는 정적 사이트를 호스팅할 뿐이다. HTML, CSS, JS 파일
 - 디자인이 깔끔하고 일관성 있다. 별도의 테마 탐색이 필요 없다.
 - Python 환경만 있으면 `pip install mkdocs-material` 한 줄로 설치 끝이다.
 
-이 블로그는 **MkDocs Material**을 쓴다. 기술 블로그에 필요한 기능이 거의 다 내장되어 있고, 설정이 단순하며, 디자인이 깔끔하기 때문이다. 2편에서 설치와 설정을 다룬다.
+이 블로그는 **MkDocs Material**을 쓴다. 기술 블로그에 필요한 기능이 거의 다 내장되어 있고, 설정이 단순하며, 디자인이 깔끔하기 때문이다. [2편](free-blog-2-mkdocs-material-setup.md)에서 설치와 설정을 다룬다.
 
 ---
 
 ## 다음 편 예고
 
-2편에서는 MkDocs Material을 설치하고, 프로젝트 구조를 잡고, 첫 글을 배포하는 과정을 다룬다. Python 환경 준비부터 `mkdocs serve`로 로컬 미리보기까지, 실제로 따라 하면서 블로그를 만들어본다.
+[2편](free-blog-2-mkdocs-material-setup.md)에서는 MkDocs Material을 설치하고, 프로젝트 구조를 잡고, 첫 글을 배포하는 과정을 다룬다. Python 환경 준비부터 `mkdocs serve`로 로컬 미리보기까지, 실제로 따라 하면서 블로그를 만들어본다.
 
 ---
 
